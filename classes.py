@@ -103,3 +103,5 @@ class AddressBook(UserDict):
             if key == name:
                 del self.data[key]
                 break
+    def __str__(self):
+        return "\n".join(str(record) for record in self.data.values())

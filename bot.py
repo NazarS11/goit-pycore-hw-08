@@ -98,8 +98,7 @@ def show_phone(address_book, name):
 @input_error
 def display_contacts(address_book):
     if address_book:
-        result = "\n".join(map(lambda record: f"Contact name: {record.name.value}, phones: {'; '.join(p.value for p in record.phones)}, birthday: {record.birthday}", address_book.data.values()))
-        return result
+        return address_book
     else: 
         return f"Address book is empty"
 
